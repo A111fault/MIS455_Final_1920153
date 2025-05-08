@@ -20,6 +20,10 @@ function showInBrowser(data) {
     var div = document.createElement("div");
     div.className = "countryBox";
 
+    let languages = "N/A";
+    if (country.languages) {
+        languages = Object.values(country.languages).join(", ");
+    }
     
     
 
@@ -29,7 +33,10 @@ function showInBrowser(data) {
         <strong>Capital:</strong> ${country.capital ? country.capital[0] : "N/A"} <br>
         <strong>Region:</strong> ${country.region} <br>
         <strong>Subregion:</strong> ${subregion} <br>
-       
+        <strong>Population:</strong> ${country.population.toLocaleString()} <br>
+        <strong>Currencies:</strong> ${currencies} <br>
+        <strong>Languages:</strong> ${languages} <br>
+        <strong>Timezones:</strong> ${timezones} <br><br>
     `;
 
     displayArea.appendChild(div);
