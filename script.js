@@ -48,7 +48,9 @@ function showInBrowser(data) {
         <strong>Region:</strong> ${country.region} <br>
         <strong>Subregion:</strong> ${subregion} <br>
         <strong>Population:</strong> ${country.population.toLocaleString()} <br>
-        
+        <strong>Currencies:</strong> ${currencies} <br>
+        <strong>Languages:</strong> ${languages} <br>
+        <strong>Timezones:</strong> ${timezones} <br><br>
     `;
 
     displayArea.appendChild(div);
