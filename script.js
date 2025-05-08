@@ -1,3 +1,4 @@
+/* Afif Bin Arfan */
 function connect() {
     var searchTerm = document.getElementById("searchBox").value.trim();
     var url = `https://restcountries.com/v3.1/name/${searchTerm}`;
