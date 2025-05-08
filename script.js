@@ -25,6 +25,20 @@ function showInBrowser(data) {
         languages = Object.values(country.languages).join(", ");
     }
     
+    let currencies = "N/A";
+    if (country.currencies) {
+        currencies = Object.values(country.currencies).map(c => c.name).join(", ");
+    }
+    
+    let timezones = "N/A";
+    if (country.timezones) {
+        timezones = country.timezones.join(", ");
+    }
+    
+    let subregion = "N/A";
+    if (country.subregion) {
+        subregion = country.subregion;
+    }
     
 
     div.innerHTML = `
@@ -34,9 +48,7 @@ function showInBrowser(data) {
         <strong>Region:</strong> ${country.region} <br>
         <strong>Subregion:</strong> ${subregion} <br>
         <strong>Population:</strong> ${country.population.toLocaleString()} <br>
-        <strong>Currencies:</strong> ${currencies} <br>
-        <strong>Languages:</strong> ${languages} <br>
-        <strong>Timezones:</strong> ${timezones} <br><br>
+        
     `;
 
     displayArea.appendChild(div);
